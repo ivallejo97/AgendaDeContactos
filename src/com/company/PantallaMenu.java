@@ -11,7 +11,7 @@ public class PantallaMenu {
         System.out.println("-------------------------");
 
         Menu menu = new Menu();
-        String[] opciones = {"Crear Contacto", "Mostrar Contactos", "Editar Contactos", "Eliminar Contacto", "Salir"};
+        String[] opciones = {"Crear Contacto", "Mostrar Contactos", "Buscar Contactos", "Editar Contactos", "Eliminar Contacto", "Salir"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
@@ -20,13 +20,16 @@ public class PantallaMenu {
         } else if("2".equals(opcion)){
             PantallaListar pantallaListar = new PantallaListar();
             pantallaListar.mostrar();
-        }  else if("3".equals(opcion)){
+        } else if("3".equals(opcion)) {
+            PantallaBuscar pantallaBuscar = new PantallaBuscar();
+            pantallaBuscar.mostrar();
+        } else if("4".equals(opcion)){
             PantallaEditar pantallaEditar = new PantallaEditar();
             pantallaEditar.mostrar();
-        }  else if("4".equals(opcion)) {
+        }  else if("5".equals(opcion)) {
             PantallaEliminar pantallaEliminar = new PantallaEliminar();
             pantallaEliminar.mostrar();
-        } else if("5".equals(opcion)){
+        } else if("6".equals(opcion)){
             return false;
         }
         return true;

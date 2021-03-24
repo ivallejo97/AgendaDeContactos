@@ -1,15 +1,16 @@
 package com.company;
 
-public class PantallaEliminarContacto {
+public class PantallaBuscarContacto {
     void mostrar() {
-        System.out.println("-----------------------");
-        System.out.println("|  ELIMINAR CONTACTO  |");
-        System.out.println("-----------------------");
+        System.out.println("---------------------");
+        System.out.println("|  BUSCAR CONTACTO  |");
+        System.out.println("---------------------");
 
-        System.out.println("Nombre del contacto a eliminar: ");
+        System.out.println("Nombre del contacto: ");
         String buscarNombre = Main.scanner.nextLine();
-        System.out.println("Apellido del contacto a eliminar: ");
+        System.out.println("Apellido del contacto: ");
         String buscarApellido = Main.scanner.nextLine();
+
         boolean encontrar = false;
         Contacto contactoencontrado = null;
 
@@ -23,8 +24,8 @@ public class PantallaEliminarContacto {
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarError("Contacto no encontrado");
         } else {
-            EliminarContacto eliminarContacto = new EliminarContacto();
-            eliminarContacto.mostrar(contactoencontrado);
+            BuscarContacto buscarContacto = new BuscarContacto();
+            buscarContacto.mostrar(contactoencontrado);
         }
     }
 }
