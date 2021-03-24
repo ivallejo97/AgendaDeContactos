@@ -24,7 +24,7 @@ public class EliminarEmpresa {
             contactoEmpresa.ubicacion = null;
 
             Mensaje mensaje = new Mensaje();
-            mensaje.mostrarInfo("La empresa con id " + contactoEmpresa.id + "y nombre " + contactoEmpresa.nombreE + "se ha eliminado");
+            mensaje.mostrarInfo("La empresa se ha eliminado correctamente");
         } else if(continuar.equals("n") || continuar.equals("N")){
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarInfo("No se ha eliminado ninguna empresa");
@@ -35,14 +35,18 @@ public class EliminarEmpresa {
         mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
 
+
         Menu menu = new Menu();
-        String[] opciones = {"Eliminar Empresa","Volver al menu"};
+        String[] opciones = {"Eliminar contacto", "Eliminar empresa", "Volver al menu"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
+            PantallaEliminarContacto pantallaEliminarContacto = new PantallaEliminarContacto();
+            pantallaEliminarContacto.mostrar();
+        } else if ("2".equals(opcion)) {
             PantallaEliminarEmpresa pantallaEliminarEmpresa = new PantallaEliminarEmpresa();
             pantallaEliminarEmpresa.mostrar();
-        } else if ("2".equals(opcion)) {
+        } else if ("3".equals(opcion)) {
             PantallaMenu pantallaMenu = new PantallaMenu();
             pantallaMenu.mostrar();
         }

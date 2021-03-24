@@ -22,7 +22,7 @@ public class EliminarContacto {
                contacto.telefono = null;
 
                Mensaje mensaje = new Mensaje();
-               mensaje.mostrarInfo("El contacto" + contacto.nombre + contacto.apellido + "se ha eliminado correctamente");
+               mensaje.mostrarInfo("El contacto se ha eliminado correctamente");
 
            } else if(continuar.equals("n") || continuar.equals("N")){
                Mensaje mensaje = new Mensaje();
@@ -35,13 +35,16 @@ public class EliminarContacto {
         System.out.println();
 
         Menu menu = new Menu();
-        String[] opciones = {"Eliminar contacto","Volver al menu"};
+        String[] opciones = {"Eliminar contacto", "Eliminar empresa", "Volver al menu"};
         String opcion = menu.elegirOpcion(opciones);
 
         if ("1".equals(opcion)) {
             PantallaEliminarContacto pantallaEliminarContacto = new PantallaEliminarContacto();
             pantallaEliminarContacto.mostrar();
         } else if ("2".equals(opcion)) {
+            PantallaEliminarEmpresa pantallaEliminarEmpresa = new PantallaEliminarEmpresa();
+            pantallaEliminarEmpresa.mostrar();
+        } else if ("3".equals(opcion)) {
             PantallaMenu pantallaMenu = new PantallaMenu();
             pantallaMenu.mostrar();
         }
