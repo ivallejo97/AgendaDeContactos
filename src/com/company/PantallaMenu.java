@@ -29,7 +29,6 @@ public class PantallaMenu {
         } else if("5".equals(opcion)){
             return false;
         }
-        //hola
         return true;
     }
 }
