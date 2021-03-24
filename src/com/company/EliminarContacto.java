@@ -22,7 +22,7 @@ public class EliminarContacto {
                contacto.telefono = null;
 
                Mensaje mensaje = new Mensaje();
-               mensaje.mostrarInfo("El contacto se ha eliminado correctamente");
+               mensaje.mostrarInfo("El contacto se ha eliminado correctamente ");
 
            } else if(continuar.equals("n") || continuar.equals("N")){
                Mensaje mensaje = new Mensaje();
