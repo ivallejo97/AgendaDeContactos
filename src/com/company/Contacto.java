@@ -6,3 +6,4 @@ public class Contacto {
     String correo;
     String telefono;
 }
+//

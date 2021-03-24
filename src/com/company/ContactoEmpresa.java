@@ -7,3 +7,4 @@ public class ContactoEmpresa {
     String ubicacion;
     String telefonoE;
 }
+//

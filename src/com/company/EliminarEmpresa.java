@@ -46,7 +46,6 @@ public class EliminarEmpresa {
             PantallaMenu pantallaMenu = new PantallaMenu();
             pantallaMenu.mostrar();
         }
-
-
     }
 }
+//
