@@ -8,8 +8,8 @@ public class Main {
     static Agenda agenda = new Agenda();
 
     public static void main(String[] args) {
-
         PantallaMenu pantallaMenu = new PantallaMenu();
         while(pantallaMenu.mostrar()) { }
+
     }
 }

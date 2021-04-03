@@ -22,7 +22,7 @@ public class EditarEmpresa {
         contactoEmpresa.ubicacion = campoObligatorio.pedir("Nueva ubicacion de la empresa:");
 
         Mensaje mensaje = new Mensaje();
-        mensaje.mostrarInfo("El contacto se ha canviado y guardado correctamente");
+        mensaje.mostrarInfo("El contacto se ha actualizado correctamente");
 
         Mensaje mensaje1 = new Mensaje();
         mensaje1.mostrarOpc("Que desea hacer ahora:");

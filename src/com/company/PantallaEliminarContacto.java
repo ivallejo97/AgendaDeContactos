@@ -22,6 +22,11 @@ public class PantallaEliminarContacto {
         if(!encontrar){
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarError("Contacto no encontrado");
+            try {
+                Thread.sleep(1000);
+            } catch(Exception e) {
+                System.out.println(e);
+            }
         } else {
             EliminarContacto eliminarContacto = new EliminarContacto();
             eliminarContacto.mostrar(contactoencontrado);

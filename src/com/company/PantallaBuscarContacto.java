@@ -23,6 +23,11 @@ public class PantallaBuscarContacto {
         if(!encontrar){
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarError("Contacto no encontrado");
+            try {
+                Thread.sleep(1000);
+            } catch(Exception e) {
+                System.out.println(e);
+            }
         } else {
             BuscarContacto buscarContacto = new BuscarContacto();
             buscarContacto.mostrar(contactoencontrado);

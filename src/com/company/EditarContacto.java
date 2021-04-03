@@ -20,7 +20,7 @@ public class EditarContacto {
                 contacto.correo = campoObligatorio.pedir("Nuevo correo electronico del contacto");
 
                 Mensaje mensaje = new Mensaje();
-                mensaje.mostrarInfo("El contacto se ha actualizado y guardado correctamente");
+                mensaje.mostrarInfo("El contacto se ha actualizado correctamente");
 
                 Mensaje mensaje1 = new Mensaje();
                 mensaje.mostrarOpc("Que desea hacer ahora:");

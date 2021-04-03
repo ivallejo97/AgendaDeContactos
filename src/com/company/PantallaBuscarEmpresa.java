@@ -20,6 +20,11 @@ public class PantallaBuscarEmpresa {
         if(!encontrar){
             Mensaje mensaje = new Mensaje();
             mensaje.mostrarError("Contacto no encontrado");
+            try {
+                Thread.sleep(1000);
+            } catch(Exception e) {
+                System.out.println(e);
+            }
         } else {
             BuscarEmpresa buscarEmpresa = new BuscarEmpresa();
             buscarEmpresa.mostrar(contactoencontradoE);
