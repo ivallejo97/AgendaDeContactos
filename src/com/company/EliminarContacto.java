@@ -3,13 +3,13 @@ package com.company;
 import java.util.Scanner;
 
 public class EliminarContacto {
-    void mostrar(Contacto contacto) {
-        System.out.println("-----------------------");
-        System.out.println("|  ELIMINAR CONTACTO  |");
-        System.out.println("-----------------------");
+    boolean mostrar(Contacto contacto) {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("    ELIMINAR CONTACTO   ");
 
         Scanner eliminar = new Scanner(System.in);
-        System.out.print("Esta seguro de que quiere eliminar este contacto(S/N): ");
+        Mensaje mensaje = new Mensaje();
+        mensaje.mostrarOpc("Esta seguro de que quiere eliminar este contacto(S/N): ");
         String continuar = eliminar.next();
 
            if (continuar.equals("s") || continuar.equals("S")){
@@ -21,16 +21,13 @@ public class EliminarContacto {
 
                contacto.telefono = null;
 
-               Mensaje mensaje = new Mensaje();
                mensaje.mostrarInfo("El contacto se ha eliminado correctamente");
 
            } else if(continuar.equals("n") || continuar.equals("N")){
-               Mensaje mensaje = new Mensaje();
                mensaje.mostrarInfo("No se ha eliminado ningun contacto");
            }
 
-
-        Mensaje mensaje = new Mensaje();
+        System.out.println();
         mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
 
@@ -44,10 +41,10 @@ public class EliminarContacto {
         } else if ("2".equals(opcion)) {
             PantallaEliminarEmpresa pantallaEliminarEmpresa = new PantallaEliminarEmpresa();
             pantallaEliminarEmpresa.mostrar();
-        } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+        }else if ("3".equals(opcion)) {
+            return false;
         }
+        return true;
 
     }
 }

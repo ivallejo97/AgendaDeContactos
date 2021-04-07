@@ -4,10 +4,9 @@ import static com.company.Main.agenda;
 
 public class EditarContacto {
 
-    void mostrar(Contacto contacto) {
-        System.out.println("--------------------");
-        System.out.println("|  EDITAR CONTACTO  |");
-        System.out.println("--------------------");
+    boolean mostrar(Contacto contacto) {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     EDITAR CONTACTO    ");
 
                 CampoObligatorio campoObligatorio = new CampoObligatorio();
 
@@ -22,7 +21,8 @@ public class EditarContacto {
                 Mensaje mensaje = new Mensaje();
                 mensaje.mostrarInfo("El contacto se ha actualizado correctamente");
 
-                Mensaje mensaje1 = new Mensaje();
+                System.out.println();
+
                 mensaje.mostrarOpc("Que desea hacer ahora:");
                 System.out.println();
 
@@ -37,8 +37,8 @@ public class EditarContacto {
                     PantallaEditarEmpresa pantallaEditarEmpresa = new PantallaEditarEmpresa();
                     pantallaEditarEmpresa.mostrar();
                 } else if ("3".equals(opcion)) {
-                    PantallaMenu pantallaMenu = new PantallaMenu();
-                    pantallaMenu.mostrar();
+                    return false;
                 }
+        return true;
     }
 }

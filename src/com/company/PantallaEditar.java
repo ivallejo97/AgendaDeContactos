@@ -1,10 +1,9 @@
 package com.company;
 
 public class PantallaEditar {
-    void mostrar() {
-        System.out.println("---------------------");
-        System.out.println("|  EDITAR CONTACTO  |");
-        System.out.println("---------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     EDITAR CONTACTO    ");
 
         Menu menu = new Menu();
         String[] opciones = {"Editar contacto", "Editar Empresa", "Volver al menu"};
@@ -17,9 +16,8 @@ public class PantallaEditar {
             PantallaEditarEmpresa pantallaEditarEmpresa = new PantallaEditarEmpresa();
             pantallaEditarEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
-
+            return false;
         }
+        return true;
     }
 }

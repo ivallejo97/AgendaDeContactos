@@ -1,10 +1,9 @@
 package com.company;
 
 public class PantallaBuscar {
-    void mostrar() {
-        System.out.println("---------------------");
-        System.out.println("|  BUSCAR CONTACTO  |");
-        System.out.println("---------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     BUSCAR CONTACTO    ");
 
         Menu menu = new Menu();
         String[] opciones = {"Buscar contacto", "Buscar Empresa", "Volver al menu"};
@@ -17,9 +16,8 @@ public class PantallaBuscar {
             PantallaBuscarEmpresa pantallaBuscarEmpresa = new PantallaBuscarEmpresa();
             pantallaBuscarEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
-
+            return false;
         }
+        return true;
     }
 }

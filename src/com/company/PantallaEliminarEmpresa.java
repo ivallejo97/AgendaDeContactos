@@ -3,12 +3,13 @@ package com.company;
 public class PantallaEliminarEmpresa {
 
     void mostrar() {
-        System.out.println("--------------------");
-        System.out.println("|  ELIMINAR EMPRESA  |");
-        System.out.println("--------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("    ELIMINAR EMPRESA    ");
 
-        System.out.println("Nombre de la empresa a eliminar: ");
-        String buscar = Main.scanner.nextLine();
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
+
+        String buscar = campoObligatorio.pedir("Nombre de la empresa a eliminar: " ,true);
+
         boolean encontrar = false;
         ContactoEmpresa contactoencontradoE = null;
 

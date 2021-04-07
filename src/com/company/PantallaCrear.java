@@ -5,10 +5,9 @@ import java.util.Scanner;
 
 public class PantallaCrear {
 
-    void mostrar() {
-        System.out.println("--------------------");
-        System.out.println("|  CREAR CONTACTO  |");
-        System.out.println("--------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     CREAR CONTACTO     ");
 
         Menu menu = new Menu();
         String[] opciones = {"Crear contacto", "Crear Empresa", "Volver al menu"};
@@ -21,9 +20,8 @@ public class PantallaCrear {
             CrearEmpresa crearEmpresa = new CrearEmpresa();
             crearEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
-
+            return false;
         }
+        return true;
     }
 }

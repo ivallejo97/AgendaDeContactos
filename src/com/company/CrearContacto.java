@@ -2,10 +2,9 @@ package com.company;
 
 public class CrearContacto {
 
-    void mostrar() {
-        System.out.println("--------------------");
-        System.out.println("|  CREAR CONTACTO  |");
-        System.out.println("--------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     CREAR CONTACTO     ");
 
         Contacto contacto = new Contacto();
         boolean creado = false;
@@ -29,6 +28,8 @@ public class CrearContacto {
 
         Main.agenda.contactos.add(contacto);
 
+        System.out.println();
+
         Mensaje mensaje = new Mensaje();
         mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
@@ -44,9 +45,9 @@ public class CrearContacto {
             CrearEmpresa crearEmpresa = new CrearEmpresa();
             crearEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+            return false;
         }
+        return true;
 
     }
 }

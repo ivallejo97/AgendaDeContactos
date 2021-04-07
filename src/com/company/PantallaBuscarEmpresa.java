@@ -2,12 +2,13 @@ package com.company;
 
 public class PantallaBuscarEmpresa {
     void mostrar() {
-        System.out.println("--------------------");
-        System.out.println("|  BUSCAR EMPRESA  |");
-        System.out.println("--------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     BUSCAR EMPRESA     ");
 
-        System.out.println("Nombre de la empresa: ");
-        String buscar = Main.scanner.nextLine();
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
+
+        String buscar = campoObligatorio.pedir("Nombre de la empresa: " ,true);
+
         boolean encontrar = false;
         ContactoEmpresa contactoencontradoE = null;
 

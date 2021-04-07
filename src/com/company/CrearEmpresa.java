@@ -1,10 +1,9 @@
 package com.company;
 
 public class CrearEmpresa {
-    void mostrar() {
-        System.out.println("-------------------");
-        System.out.println("|  CREAR EMPRESA  |");
-        System.out.println("-------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     CREAR EMPRESA      ");
 
         ContactoEmpresa contactoEmpresa = new ContactoEmpresa();
         boolean creado = false;
@@ -32,6 +31,8 @@ public class CrearEmpresa {
 
         Main.agenda.contactoEmpresas.add(contactoEmpresa);
 
+        System.out.println();
+
         Mensaje mensaje = new Mensaje();
         mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
@@ -47,9 +48,9 @@ public class CrearEmpresa {
             CrearEmpresa crearEmpresa = new CrearEmpresa();
             crearEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+            return false;
         }
+        return true;
 
     }
 }

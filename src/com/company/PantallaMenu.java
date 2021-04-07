@@ -6,9 +6,8 @@ import java.util.Scanner;
 public class PantallaMenu {
 
     boolean mostrar(){
-        System.out.println("-------------------------");
-        System.out.println("|  AGENDA DE CONTACTOS  |");
-        System.out.println("-------------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("  AGENDA DE CONTACTOS   ");
 
         Menu menu = new Menu();
         String[] opciones = {"Crear Contacto", "Mostrar Contactos", "Buscar Contactos", "Editar Contactos", "Eliminar Contacto", "Salir"};

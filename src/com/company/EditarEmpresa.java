@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class EditarEmpresa {
 
-    void mostrar(ContactoEmpresa contactoEmpresa) {
-        System.out.println("--------------------");
-        System.out.println("|  EDITAR EMPRESA  |");
-        System.out.println("--------------------");
+    boolean mostrar(ContactoEmpresa contactoEmpresa) {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     EDITAR EMPRESA     ");
 
         CampoObligatorio campoObligatorio = new CampoObligatorio();
 
@@ -24,8 +23,9 @@ public class EditarEmpresa {
         Mensaje mensaje = new Mensaje();
         mensaje.mostrarInfo("El contacto se ha actualizado correctamente");
 
-        Mensaje mensaje1 = new Mensaje();
-        mensaje1.mostrarOpc("Que desea hacer ahora:");
+        System.out.println();
+
+        mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
 
         Menu menu = new Menu();
@@ -39,8 +39,8 @@ public class EditarEmpresa {
             PantallaEditarEmpresa pantallaEditarEmpresa = new PantallaEditarEmpresa();
             pantallaEditarEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+            return false;
         }
+        return true;
     }
 }

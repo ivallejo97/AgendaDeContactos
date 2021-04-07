@@ -4,28 +4,22 @@ import java.util.Scanner;
 
 public class BuscarEmpresa {
     void mostrar(ContactoEmpresa contactoEmpresa) {
-        System.out.println("------------------------");
-        System.out.println("|  EMPRESA ENCONTRADA  |");
-        System.out.println("------------------------");
+       Titulo titulo = new Titulo();
+       titulo.mostrar("   EMPRESA ENCONTRADA   ");
 
-        if(contactoEmpresa.id == null){
-        } else{
+        if(contactoEmpresa.id != null){
             System.out.print(contactoEmpresa.id +" ");
         }
-        if(contactoEmpresa.nombreE == null){
-        } else{
+        if(contactoEmpresa.nombreE != null){
             System.out.print(contactoEmpresa.nombreE +" ");
         }
-        if(contactoEmpresa.telefonoE == null){
-        } else{
+        if(contactoEmpresa.telefonoE != null){
             System.out.print(contactoEmpresa.telefonoE + " ");
         }
-        if(contactoEmpresa.correoE == null){
-        } else{
+        if(contactoEmpresa.correoE != null){
             System.out.print(contactoEmpresa.correoE +" ");
         }
-        if(contactoEmpresa.ubicacion == null){
-        } else{
+        if(contactoEmpresa.ubicacion != null){
             System.out.println(contactoEmpresa.ubicacion);
         }
 

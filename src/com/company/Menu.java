@@ -22,8 +22,8 @@ public class Menu {
                 mensaje.mostrarError("No existe la opcion");
                 String volverAlMenu;
                 Scanner teclado = new Scanner(System.in);
-                Mensaje mensaje1 = new Mensaje();
-                mensaje1.mostrarOpc("Presiona intro para volver al menu: ");
+                System.out.println();
+                mensaje.mostrarOpc("Presiona intro para volver al menu: ");
                 try
                 {
                     volverAlMenu = teclado.nextLine();

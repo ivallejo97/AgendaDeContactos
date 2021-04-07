@@ -2,14 +2,14 @@ package com.company;
 
 public class PantallaEliminarContacto {
     void mostrar() {
-        System.out.println("-----------------------");
-        System.out.println("|  ELIMINAR CONTACTO  |");
-        System.out.println("-----------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("    ELIMINAR CONTACTO   ");
 
-        System.out.println("Nombre del contacto a eliminar: ");
-        String buscarNombre = Main.scanner.nextLine();
-        System.out.println("Apellido del contacto a eliminar: ");
-        String buscarApellido = Main.scanner.nextLine();
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
+
+        String buscarNombre = campoObligatorio.pedir("Nombre del contacto a eliminar: " ,true);
+        String buscarApellido = campoObligatorio.pedir("Apellido del contacto a eliminar: " ,true);
+
         boolean encontrar = false;
         Contacto contactoencontrado = null;
 

@@ -3,13 +3,13 @@ package com.company;
 public class PantallaEditarEmpresa {
 
     void mostrar() {
-        System.out.println("--------------------");
-        System.out.println("|  EDITAR EMPRESA  |");
-        System.out.println("--------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     EDITAR EMPRESA    ");
 
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
 
-        System.out.println("Empresa a editar:");
-        String buscar = Main.scanner.nextLine();
+        String buscar = campoObligatorio.pedir("Nombre de la empresa a editar: " ,true);
+
         boolean encontrar = false;
         ContactoEmpresa contactoencontradoE = null;
 

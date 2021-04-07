@@ -1,10 +1,9 @@
 package com.company;
 
 public class PantallaEliminar {
-    void mostrar() {
-        System.out.println("-----------------------");
-        System.out.println("|  ELIMINAR CONTACTO  |");
-        System.out.println("-----------------------");
+    boolean mostrar() {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("    ELIMINAR CONTACTO   ");
 
         Menu menu = new Menu();
         String[] opciones = {"Eliminar contacto", "Eliminar Empresa", "Volver al menu"};
@@ -17,9 +16,8 @@ public class PantallaEliminar {
            PantallaEliminarEmpresa pantallaEliminarEmpresa = new PantallaEliminarEmpresa();
            pantallaEliminarEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
-
+            return false;
         }
+        return true;
     }
 }

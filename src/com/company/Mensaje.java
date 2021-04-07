@@ -20,7 +20,7 @@ public class Mensaje {
     }
 
     void printBefore(){
-        System.out.println();
+
     }
 
     static void printAfter(){

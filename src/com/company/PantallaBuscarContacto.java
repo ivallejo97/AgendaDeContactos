@@ -2,14 +2,14 @@ package com.company;
 
 public class PantallaBuscarContacto {
     void mostrar() {
-        System.out.println("---------------------");
-        System.out.println("|  BUSCAR CONTACTO  |");
-        System.out.println("---------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     BUSCAR CONTACTO    ");
 
-        System.out.println("Nombre del contacto: ");
-        String buscarNombre = Main.scanner.nextLine();
-        System.out.println("Apellido del contacto: ");
-        String buscarApellido = Main.scanner.nextLine();
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
+
+        String buscarNombre = campoObligatorio.pedir("Nombre del contacto: " ,true);
+        String buscarApellido = campoObligatorio.pedir("Apellido del contacto: " ,true);
+
 
         boolean encontrar = false;
         Contacto contactoencontrado = null;

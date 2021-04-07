@@ -3,10 +3,9 @@ package com.company;
 import java.util.Scanner;
 
 public class EliminarEmpresa {
-    void mostrar(ContactoEmpresa contactoEmpresa) {
-        System.out.println("----------------------");
-        System.out.println("|  ELIMINAR EMPRESA  |");
-        System.out.println("----------------------");
+    boolean mostrar(ContactoEmpresa contactoEmpresa) {
+        Titulo titulo = new Titulo();
+        titulo.mostrar("    ELIMINAR EMPRESA    ");
 
         Scanner eliminar = new Scanner(System.in);
         System.out.print("Esta seguro de que quiere eliminar este contacto(S/N): ");
@@ -47,8 +46,8 @@ public class EliminarEmpresa {
             PantallaEliminarEmpresa pantallaEliminarEmpresa = new PantallaEliminarEmpresa();
             pantallaEliminarEmpresa.mostrar();
         } else if ("3".equals(opcion)) {
-            PantallaMenu pantallaMenu = new PantallaMenu();
-            pantallaMenu.mostrar();
+            return false;
         }
+        return true;
     }
 }

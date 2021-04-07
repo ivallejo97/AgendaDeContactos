@@ -3,14 +3,13 @@ package com.company;
 public class PantallaEditarContacto {
 
     void mostrar() {
-        System.out.println("---------------------");
-        System.out.println("|  EDITAR CONTACTO  |");
-        System.out.println("---------------------");
+        Titulo titulo = new Titulo();
+        titulo.mostrar("     EDITAR CONTACTO    ");
 
-        System.out.println("Nombre del contacto: ");
-        String buscarNombre = Main.scanner.nextLine();
-        System.out.println("Apellido del contacto: ");
-        String buscarApellido = Main.scanner.nextLine();
+        CampoObligatorio campoObligatorio = new CampoObligatorio();
+
+        String buscarNombre = campoObligatorio.pedir("Nombre del contacto a editar: " ,true);
+        String buscarApellido = campoObligatorio.pedir("Apellido del contacto a editar: " ,true);
 
         boolean encontrar = false;
         Contacto contactoencontrado = null;
