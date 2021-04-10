@@ -8,7 +8,8 @@ public class EliminarEmpresa {
         titulo.mostrar("    ELIMINAR EMPRESA    ");
 
         Scanner eliminar = new Scanner(System.in);
-        System.out.print("Esta seguro de que quiere eliminar este contacto(S/N): ");
+        Mensaje mensaje = new Mensaje();
+        mensaje.mostrarOpc("Esta seguro de que quiere eliminar este contacto(S/N): ");
         String continuar = eliminar.next();
 
         if (continuar.equals("s") || continuar.equals("S")) {
@@ -22,18 +23,15 @@ public class EliminarEmpresa {
 
             contactoEmpresa.ubicacion = null;
 
-            Mensaje mensaje = new Mensaje();
             mensaje.mostrarInfo("La empresa se ha eliminado correctamente");
         } else if(continuar.equals("n") || continuar.equals("N")){
-            Mensaje mensaje = new Mensaje();
             mensaje.mostrarInfo("No se ha eliminado ninguna empresa");
         }
 
-
-        Mensaje mensaje = new Mensaje();
-        mensaje.mostrarOpc("Que desea hacer ahora:");
         System.out.println();
+        mensaje.mostrarOpc("Que desea hacer ahora:");
 
+        System.out.println();
 
         Menu menu = new Menu();
         String[] opciones = {"Eliminar contacto", "Eliminar empresa", "Volver al menu"};

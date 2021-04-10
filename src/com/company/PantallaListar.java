@@ -43,14 +43,8 @@ public class PantallaListar {
             }
         }
 
-        String volverAlMenu;
-        Scanner teclado = new Scanner(System.in);
-        System.out.println();
-        System.out.println("Presiona intro para volver al menu: ");
-        try {
-            volverAlMenu = teclado.nextLine();
-        } catch (Exception e) {
-        }
+        Enter enter = new Enter();
+        enter.mostrar();
     }
 
 }

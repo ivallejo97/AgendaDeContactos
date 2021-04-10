@@ -9,7 +9,7 @@ public class Mensaje {
 
     void mostrarOpc(String texto){
         printBefore();
-        System.out.println("\033[34m" + texto + "\033[0m");
+        System.out.println("\033[33m" + texto + "\033[0m");
         printAfter();
     }
 

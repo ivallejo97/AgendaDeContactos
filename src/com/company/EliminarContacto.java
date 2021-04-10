@@ -29,6 +29,7 @@ public class EliminarContacto {
 
         System.out.println();
         mensaje.mostrarOpc("Que desea hacer ahora:");
+
         System.out.println();
 
         Menu menu = new Menu();
